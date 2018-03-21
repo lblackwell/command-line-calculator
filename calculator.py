@@ -1,4 +1,4 @@
-
+import getch
 
 class Calculator(object):
     def __init__(self, last_result=0, input=None):
@@ -196,8 +196,7 @@ class Calculator(object):
         """Retrieves input from command line. Accepts input until user enters
         'q', which will quit the program, or '=', which will evaluate entered
         input."""
-        print('Enter equation:')
-        char = getch()
+        char = getch.getch()
         print(char)
         if char.lower() == 'q':
             return False
